@@ -1,6 +1,7 @@
 <template>
   <div class="item">
     <i>
+      123
       <slot name="icon"></slot>
     </i>
     <div class="details">
