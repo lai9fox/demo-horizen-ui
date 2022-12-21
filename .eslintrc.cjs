@@ -16,6 +16,7 @@ module.exports = {
     // 不允许使用 var 关键字
     'no-var': 'error',
     'array-bracket-newline': ['error', { multiline: true }],
+    'vue/multi-word-component-names': 0, // 不检验组件名需要多个单词组成
     'vue/component-tags-order': [
       'error',
       {
