@@ -3,7 +3,7 @@ import routesMap from './map.js';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: routesMap,
+  routes: routesMap
 });
 
 export default router;

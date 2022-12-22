@@ -1,8 +1,6 @@
 <template>
   <div :class="app.wrap">
-    <nav :class="app.nav">
-      123
-    </nav>
+    <NavBar :class="app.nav" />
     <main :class="app.main">
       <RouterView />
     </main>
@@ -10,7 +8,8 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
+import NavBar from '@/components/nav-bar.vue';
 </script>
 
 <style lang="less" module="app">
@@ -18,13 +17,14 @@ import { RouterLink, RouterView } from 'vue-router';
   display: flex;
   width: 100%;
   height: 100%;
+  color: @text-dark;
 }
 .nav {
   width: 290px;
-  background-color: yellowgreen;
+  background-color: @bg-white;
 }
 .main {
   flex: 1;
-  background-color: aquamarine;
+  background-color: @bg-blue-gray;
 }
 </style>

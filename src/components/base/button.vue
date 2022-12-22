@@ -1,7 +1,6 @@
 <template>
   <div class="about">
-    <h1>Dashboard Vue</h1>
-
+    123
   </div>
 </template>
 

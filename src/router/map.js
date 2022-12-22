@@ -4,12 +4,32 @@ const routesMap = [
   {
     path: '/',
     name: 'login',
-    component: '/src/views/login.vue',
+    component: '/src/views/login.vue'
   },
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: '/src/views/dashboard',
+    component: '/src/views/dashboard'
+  },
+  {
+    path: '/marketplace',
+    name: 'marketplace',
+    component: '/src/views/dashboard'
+  },
+  {
+    path: '/tables',
+    name: 'tables',
+    component: '/src/views/dashboard'
+  },
+  {
+    path: '/kanban',
+    name: 'kanban',
+    component: '/src/views/dashboard'
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: '/src/views/dashboard'
   }
 ];
 

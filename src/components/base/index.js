@@ -1,13 +1,15 @@
-// eslint-disable-next-line no-unused-vars
-const b = 3 === 1;
+const components = import.meta.glob('./*.vue', { eager: true });
 
-// eslint-disable-next-line no-unused-vars
-function a() {
-
+function transformName(name) {
+  const names = name.split('-');
+  return names.reduce((pre, cur) => {
+    return pre + cur.charAt(0).toUpperCase() + cur.substring(1);
+  }, '');
 }
 
-// eslint-disable-next-line no-unused-vars
-const c = function() {};
-
-let d = null;
-console.log(d);
+export default function install(app) {
+  for (const [fileName, value] of Object.entries(components)) {
+    const name = `Base${ transformName(fileName.substring(2).replace(/.vue/, '')) }`;
+    app.component(name, value.default);
+  }
+}
