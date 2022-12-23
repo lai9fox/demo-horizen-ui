@@ -29,10 +29,10 @@ const iconName = computed(() => `#icon-${ props.name }`);
 
 <style lang="less">
 .svg-icon {
+  overflow: hidden;
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em;
   fill: @text-light;
-  overflow: hidden;
+  vertical-align: -0.15em;
 }
 </style>

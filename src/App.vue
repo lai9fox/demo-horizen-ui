@@ -19,10 +19,12 @@ import NavBar from '@/components/nav-bar.vue';
   height: 100%;
   color: @text-dark;
 }
+
 .nav {
   width: 290px;
   background-color: @bg-white;
 }
+
 .main {
   flex: 1;
   background-color: @bg-blue-gray;

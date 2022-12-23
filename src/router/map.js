@@ -9,27 +9,27 @@ const routesMap = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: '/src/views/dashboard'
+    component: '/src/views/dashboard.vue'
   },
   {
     path: '/marketplace',
     name: 'marketplace',
-    component: '/src/views/dashboard'
+    component: '/src/views/marketplace.vue'
   },
   {
     path: '/tables',
     name: 'tables',
-    component: '/src/views/dashboard'
+    component: '/src/views/tables.vue'
   },
   {
     path: '/kanban',
     name: 'kanban',
-    component: '/src/views/dashboard'
+    component: '/src/views/kanban.vue'
   },
   {
     path: '/profile',
     name: 'profile',
-    component: '/src/views/dashboard'
+    component: '/src/views/profile.vue'
   }
 ];
 

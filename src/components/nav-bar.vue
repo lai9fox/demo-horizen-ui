@@ -42,18 +42,19 @@ const route = useRoute();
 .banner {
   width: 100%;
   height: 129px;
+  border-bottom: 1px solid @border-light;
+  font-size: 26px;
   line-height: 129px;
   text-align: center;
-  font-size: 26px;
-  border-bottom: 1px solid @border-light;
 }
+
 .banner-bold {
   font-weight: 700;
 }
 
 .icons {
-  font-size: 24px;
   margin-right: 13px;
+  font-size: 24px;
 }
 
 .links {
@@ -62,31 +63,34 @@ const route = useRoute();
 }
 
 .link {
-  height: 52px;
-  line-height: 32px;
   width: 100%;
-  padding: 10px 0 10px 33px;
+  height: 52px;
   box-sizing: border-box;
+  padding: 10px 0 10px 33px;
   color: @text-light;
   cursor: pointer;
+  line-height: 32px;
+
   &:hover {
     background-color: @hover;
   }
 }
+
 .link-active {
-  color: @text-dark;
-  background-color: @hover;
   position: relative;
+  background-color: @hover;
+  color: @text-dark;
+
   &::after {
-    content: "";
-    display: inline-block;
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    display: inline-block;
     width: 4px;
     height: 100%;
     border-radius: 2px;
     background-color: @icon-purple;
+    content: "";
   }
 
   & > .icons {

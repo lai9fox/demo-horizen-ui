@@ -11,10 +11,12 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "eslint.alwaysShowStatus": true,
   "eslint.validate": ["javascript", "typescript", "vue"],
+  "stylelint.validate": ["css", "less", "postcss", "vue"],
   "volar.completion.normalizeComponentAutoImportName": false,
   "volar.codeLens.references": false
 }
