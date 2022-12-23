@@ -33,3 +33,15 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### BEM 命名规范
+```
+Bem 是块（block）、元素（element）、修饰符（modifier）的简写,命名约定的模式是：
+```
+```js
+.block {}
+
+.block__element {}
+
+.block--modifier {}
+```

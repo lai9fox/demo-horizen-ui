@@ -4,12 +4,16 @@ const routesMap = [
   {
     path: '/',
     name: 'login',
-    component: '/src/views/login.vue'
+    redirect: 'dashboard'
+    // component: '/src/views/login.vue'
   },
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: '/src/views/dashboard.vue'
+    component: '/src/views/dashboard.vue',
+    meta: {
+      title: 'Main Dashboard'
+    }
   },
   {
     path: '/marketplace',

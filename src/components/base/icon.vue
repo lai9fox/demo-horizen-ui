@@ -1,8 +1,10 @@
 <!-- ICON 组件，使用 SVG -->
 <template>
-  <svg :class="svgClass" aria-hidden="true" :style="{ color: props.color }" v-on="$attrs">
-    <use :xlink:href="iconName" />
-  </svg>
+  <span class="h-icon">
+    <svg :class="svgClass" aria-hidden="true" :style="{ color: props.color }" v-on="$attrs">
+      <use :xlink:href="iconName" />
+    </svg>
+  </span>
 </template>
 
 <script setup>
@@ -18,9 +20,9 @@ const props = defineProps({
 
 const svgClass = computed(() => {
   if (props.name) {
-    return `svg-icon icon-${ props.name }`;
+    return `h-icon__svg h-icon__${ props.name }`;
   } else {
-    return 'svg-icon';
+    return 'h-icon__svg';
   }
 });
 
@@ -28,11 +30,16 @@ const iconName = computed(() => `#icon-${ props.name }`);
 </script>
 
 <style lang="less">
-.svg-icon {
-  overflow: hidden;
-  width: 1em;
-  height: 1em;
-  fill: @text-light;
-  vertical-align: -0.15em;
+.h-icon {
+  padding: 2px;
+  text-align: center;
+
+  &__svg {
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    fill: @text-light;
+    vertical-align: -0.15em;
+  }
 }
 </style>

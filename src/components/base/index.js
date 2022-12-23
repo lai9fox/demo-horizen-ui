@@ -1,3 +1,5 @@
+// 自动注册当前文件夹下的所有组件为全局组件
+
 const components = import.meta.glob('./*.vue', { eager: true });
 
 function transformName(name) {

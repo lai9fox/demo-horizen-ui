@@ -1,16 +1,12 @@
 <template>
-  <div class="about">
-    <h1>Dashboard Vue</h1>
-
+  <div :class="dashboard.wrap">
+    dashboard body
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-  }
-}
+<script setup>
+</script>
+
+<style lang="less" module="dashboard">
+// .wrap {}
 </style>

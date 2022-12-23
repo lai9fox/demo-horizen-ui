@@ -30,7 +30,6 @@ function findSvgFile(dir) {
             }
             return '';
           });
-          console.log(content);
           if (!hasViewBox.test($2)) {
             content += ` viewBox="0 0 ${ width } ${ height }"`;
           }
