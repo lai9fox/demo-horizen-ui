@@ -94,6 +94,7 @@ const route = useRoute();
       content: "";
     }
 
+    /* stylelint-disable-next-line selector-class-pattern */
     & > .h-nav__icons {
       color: @icon-purple;
     }

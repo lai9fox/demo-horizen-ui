@@ -32,7 +32,7 @@ const iconName = computed(() => `#icon-${ props.name }`);
     overflow: hidden;
     width: 1em;
     height: 1em;
-    fill: @text-light;
+    // fill: @text-light;
     vertical-align: -0.15em;
   }
 }

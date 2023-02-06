@@ -78,7 +78,7 @@ const nav = computed(() => {
 
 .body {
   flex: 1;
-  border: 1px solid @text-dark;
+  // border: 1px solid @text-dark;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
