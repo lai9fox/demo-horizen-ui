@@ -1,0 +1,1 @@
+import{_ as s,d as o,o as c,c as a,b as t,a as n}from"./index-4d290a26.js";const r={},_={},d={class:"about"},l=n("h1",null,"MarketPlace",-1);function u(m,f){const e=o("BaseIcon");return c(),a("div",d,[l,t(e,{name:"dashboard",color:"aqua"})])}const i={$style:r},h=s(_,[["render",u],["__cssModules",i]]);export{h as default};

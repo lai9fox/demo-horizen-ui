@@ -1,0 +1,1 @@
+import{_ as s,d as o,o as c,c as a,b as n,a as t}from"./index-4d290a26.js";const _={},r={},d={class:"about"},l=t("h1",null,"Kanban",-1);function u(m,f){const e=o("BaseIcon");return c(),a("div",d,[l,n(e,{name:"dashboard",color:"aqua"})])}const i={$style:_},h=s(r,[["render",u],["__cssModules",i]]);export{h as default};
