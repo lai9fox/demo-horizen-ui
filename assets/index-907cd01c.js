@@ -1,1 +1,0 @@
-import{_ as o,d as s,o as c,c as t,b as a,a as n}from"./index-4d290a26.js";const r={},_={},d={class:"about"},l=n("h1",null,"Profile",-1);function i(f,m){const e=s("BaseIcon");return c(),t("div",d,[l,a(e,{name:"dashboard",color:"aqua"})])}const u={$style:r},h=o(_,[["render",i],["__cssModules",u]]);export{h as default};
