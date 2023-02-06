@@ -1,1 +1,0 @@
-import{_ as o,r as s,o as c,a as n,b as t,e as a}from"./index-f108392c.js";const r={},_={},d={class:"about"},l=a("h1",null,"Login Vue",-1);function u(m,f){const e=s("BaseIcon");return c(),n("div",d,[l,t(e,{name:"dashboard",color:"aqua"})])}const i={$style:r},h=o(_,[["render",u],["__cssModules",i]]);export{h as default};
