@@ -11,7 +11,7 @@ console.log(import.meta.url);
 console.log(varPath);
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/horizen-ui',
+  base: '/demo-horizen-ui',
   plugins: [vue(), vueJsx(), svgBuilder('./src/assets/svg/')],
   css: {
     // CSS 预处理器
