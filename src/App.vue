@@ -35,8 +35,8 @@ const title = computed(() => {
 }
 
 .main {
-  height: 100%;
-  box-sizing: border-box;
+  // height: 100%;
+  // box-sizing: border-box;
   flex: 1;
   padding: 55px 20px 0;
   background-color: @bg-blue-gray;

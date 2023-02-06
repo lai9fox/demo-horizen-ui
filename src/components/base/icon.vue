@@ -1,14 +1,14 @@
 <!-- ICON 组件，使用 SVG -->
 <template>
-  <span class="h-icon">
-    <svg :class="svgClass" aria-hidden="true" :style="{ color: props.color }" v-on="$attrs">
+  <span :class="bem()">
+    <svg :class="bem(['svg', name])" aria-hidden="true" :style="{ color: props.color }" v-on="$attrs">
       <use :xlink:href="iconName" />
     </svg>
   </span>
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 const props = defineProps({
   // icon 名称
   name: {
@@ -18,13 +18,7 @@ const props = defineProps({
   color: String
 });
 
-const svgClass = computed(() => {
-  if (props.name) {
-    return `h-icon__svg h-icon__${ props.name }`;
-  } else {
-    return 'h-icon__svg';
-  }
-});
+const bem = inject('$bem')('h-icon');
 
 const iconName = computed(() => `#icon-${ props.name }`);
 </script>

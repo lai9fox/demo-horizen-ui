@@ -453,6 +453,13 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@lai9fox/vue-bem@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@lai9fox/vue-bem/-/vue-bem-0.4.3.tgz#4f01ac5db3bac1e9540f59581828fe386fcdea18"
+  integrity sha512-enHFJIMn4HQyUnNpvlcjYj0eB1hA3hDyNb0yR78HdC5/8KarQk7L1bEtWeu5NJvgtYzbj8qsfZyQ8/tk7ohYdA==
+  dependencies:
+    lodash-es "^4.17.21"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1581,6 +1588,11 @@ locate-path@^6.0.0:
   integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
   dependencies:
     p-locate "^5.0.0"
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.merge@^4.6.2:
   version "4.6.2"

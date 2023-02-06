@@ -1,10 +1,10 @@
 <!-- 工具栏：搜索、通知、外观、信息等 -->
 
 <template>
-  <div class="h-toolbar">
+  <div :class="bem()">
     <BaseInput
       v-model="search"
-      :class="['h-toolbar__search', { 'h-toolbar__search--focus': isFocus }]"
+      :class="bem(['search', { 'search:focus': isFocus }])"
       showClear
       @focus="expandWidth"
       @blur="expandWidth"
@@ -13,17 +13,18 @@
         <BaseIcon name="search" />
       </template>
     </BaseInput>
-    <BaseIcon class="h-toolbar__icon" name="notify"></BaseIcon>
-    <BaseIcon class="h-toolbar__icon" name="moon"></BaseIcon>
-    <BaseIcon class="h-toolbar__icon" name="info"></BaseIcon>
-    <div class="h-toolbar__avatar">
-      <img src="/src/assets/img/avatar.png" alt="avatar" class="h-toolbar__img">
+    <BaseIcon :class="bem('icon')" name="notify"></BaseIcon>
+    <BaseIcon :class="bem('icon')" name="moon"></BaseIcon>
+    <BaseIcon :class="bem('icon')" name="info"></BaseIcon>
+    <div :class="bem('avatar')">
+      <img src="/src/assets/img/avatar.png" alt="avatar" :class="bem('img')">
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
+const bem = inject('$bem')('h-toolbar');
 
 // 搜索参数
 const search = ref('');

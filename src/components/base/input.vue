@@ -1,13 +1,13 @@
 <!-- input 通用组件 -->
 
 <template>
-  <div class="h-input">
+  <div :class="bem()">
     <!-- 前缀 -->
     <slot name="prefix" />
     <input
       :value="modelValue"
       type="text"
-      :class="['h-input__input', { 'h-input__close--display': showClear }]"
+      :class="bem(['input', { 'close:display': showClear }])"
       :placeholder="props.placeholder"
       v-bind="attrs"
       @keypress.enter="enterInput"
@@ -16,15 +16,14 @@
     <BaseIcon
       v-show="clearIconShow"
       name="close"
-      class="h-input__close"
+      :class="bem('close')"
       @click="clearInput"
     />
   </div>
 </template>
 <script setup>
-import { computed } from 'vue';
-import { useAttrs } from 'vue';
-
+import { computed, useAttrs, inject } from 'vue';
+const bem = inject('$bem')('h-input');
 // props 属性
 const props = defineProps({
   // 双向绑定

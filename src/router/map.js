@@ -1,4 +1,4 @@
-const viewsComponents = import.meta.glob('@/views/*.vue');
+const viewsComponents = import.meta.glob('@/views/*/*.vue');
 
 const routesMap = [
   {
@@ -10,7 +10,7 @@ const routesMap = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: '/src/views/dashboard.vue',
+    component: '/src/views/dashboard/index.vue',
     meta: {
       title: 'Main Dashboard'
     }
@@ -18,22 +18,22 @@ const routesMap = [
   {
     path: '/marketplace',
     name: 'marketplace',
-    component: '/src/views/marketplace.vue'
+    component: '/src/views/marketplace/index.vue'
   },
   {
     path: '/tables',
     name: 'tables',
-    component: '/src/views/tables.vue'
+    component: '/src/views/tables/index.vue'
   },
   {
     path: '/kanban',
     name: 'kanban',
-    component: '/src/views/kanban.vue'
+    component: '/src/views/kanban/index.vue'
   },
   {
     path: '/profile',
     name: 'profile',
-    component: '/src/views/profile.vue'
+    component: '/src/views/profile/index.vue'
   }
 ];
 

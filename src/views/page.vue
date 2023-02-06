@@ -15,6 +15,22 @@
     <div :class="page.body">
       <slot />
     </div>
+    <!-- 页脚 -->
+    <div :class="page.footer">
+      <slot name="footer">
+        <div :class="page.about">
+          <div :class="page.copyright">
+            © 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!
+          </div>
+          <div :class="page.links">
+            <li>Marketplace</li>
+            <li>License</li>
+            <li>Terms of Use</li>
+            <li>Blog</li>
+          </div>
+        </div>
+      </slot>
+    </div>
   </main>
 </template>
 
@@ -37,6 +53,11 @@ const nav = computed(() => {
 </script>
 
 <style lang="less" module="page">
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
 .crumbs {
   color: @text-light;
 }
@@ -56,6 +77,46 @@ const nav = computed(() => {
 }
 
 .body {
+  flex: 1;
   border: 1px solid @text-dark;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: @scroll-bar;
+  }
+}
+
+.footer {
+  height: 64px;
+  box-sizing: border-box;
+  padding: 20px;
+  color: @text-light;
+  font-size: 14px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  gap: 42px;
+
+  & li {
+    list-style: none;
+  }
+
+  & li:hover {
+    color: @text-dark;
+  }
 }
 </style>
