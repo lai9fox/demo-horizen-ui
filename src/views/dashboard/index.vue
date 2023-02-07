@@ -9,12 +9,13 @@
         </template>
       </Tip>
     </div>
-    <BaseCard :class="dashboard.month" />
+    <Month />
   </div>
 </template>
 
 <script setup>
 import Tip from '@/components/tip.vue';
+import Month from './component/month.vue';
 import { ref } from 'vue';
 
 const tipsData = ref([
@@ -44,10 +45,5 @@ const tipsData = ref([
 
 .down {
   color: @text-error;
-}
-
-.month {
-  width: 774px;
-  height: 345px;
 }
 </style>
