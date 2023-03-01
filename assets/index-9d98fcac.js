@@ -1,0 +1,1 @@
+import{_ as o,r as s,o as c,g as t,e as n,b as a}from"./index-95e5d539.js";const r={},_={},l={class:"about"},d=a("h1",null,"Profile",-1);function i(f,m){const e=s("HIcon");return c(),t("div",l,[d,n(e,{name:"dashboard",color:"aqua"})])}const u={$style:r},h=o(_,[["render",i],["__cssModules",u]]);export{h as default};

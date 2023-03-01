@@ -1,0 +1,1 @@
+import{_ as o,r as s,o as c,g as t,e as n,b as a}from"./index-95e5d539.js";const r={},_={},l={class:"about"},d=a("h1",null,"MarketPlace",-1);function u(m,f){const e=s("HIcon");return c(),t("div",l,[d,n(e,{name:"dashboard",color:"aqua"})])}const i={$style:r},h=o(_,[["render",u],["__cssModules",i]]);export{h as default};
