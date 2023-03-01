@@ -2,7 +2,7 @@
 
 <template>
   <div :class="bem()">
-    <BaseInput
+    <HInput
       v-model="search"
       :class="bem(['search', { 'search:focus': isFocus }])"
       showClear
@@ -10,12 +10,12 @@
       @blur="expandWidth"
     >
       <template #prefix>
-        <BaseIcon name="search" />
+        <HIcon name="search" />
       </template>
-    </BaseInput>
-    <BaseIcon :class="bem('icon')" name="notify"></BaseIcon>
-    <BaseIcon :class="bem('icon')" name="moon"></BaseIcon>
-    <BaseIcon :class="bem('icon')" name="info"></BaseIcon>
+    </HInput>
+    <HIcon :class="bem('icon')" name="notify"></HIcon>
+    <HIcon :class="bem('icon')" name="moon"></HIcon>
+    <HIcon :class="bem('icon')" name="info"></HIcon>
     <div :class="bem('avatar')">
       <img src="/src/assets/img/avatar.png" alt="avatar" :class="bem('img')">
     </div>
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import createBem from '@lai9fox/bem';
-import { ref, inject } from 'vue';
+import { ref } from 'vue';
 const bem = createBem('h-toolbar');
 
 // 搜索参数

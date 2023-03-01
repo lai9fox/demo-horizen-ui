@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import Tip from '@/components/tip.vue';
+import Tip from '@/components/tip/index.vue';
 import Month from './component/month.vue';
 import { ref } from 'vue';
 
@@ -35,6 +35,7 @@ const tipsData = ref([
 
 .tips {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }

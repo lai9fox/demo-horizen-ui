@@ -3,25 +3,37 @@
 <template>
   <div :class="bem('wrap')">
     <div :class="bem('banner')">
-      <span :class="bem('banner-bold')">HORIZEN</span> FREE
+      <span :class="bem('banner:show')">
+        <span :class="bem(['banner:bold'])">HORIZEN</span> FREE
+      </span>
+      <span :class="bem(['banner:bold', 'banner:hidden'])">H</span>
     </div>
     <div :class="bem('links')">
       <div
         v-for="link in navLinks"
         :key="link.link"
-        :class="bem(['link', { 'link-active': link.link === route.path }])">
-        <BaseIcon :name="link.icon" :class="bem('icons')" />
-        <RouterLink :to="link.link">{{ link.name }}</RouterLink>
+        :class="bem(['link', { 'link:active': link.link === route.path }])"
+        @click="routeClick(link)"
+      >
+        <HIcon :name="link.icon" :class="bem('icons')" />
+        <RouterLink :to="link.link" :class="bem('text:hidden')">{{ link.name }}</RouterLink>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, inject } from 'vue';
-import { RouterLink, useRoute } from 'vue-router';
+import { ref } from 'vue';
+import { RouterLink, useRoute, useRouter } from 'vue-router';
 import createBem from '@lai9fox/bem';
 const bem = createBem('h-nav');
+
+interface RouteLink {
+  name: string,
+  link: string,
+  icon: string,
+}
+
 // 侧边栏目链接
 const navLinks = ref([
   { name: 'Dashboard', link: '/dashboard', icon: 'dashboard' },
@@ -33,12 +45,21 @@ const navLinks = ref([
 
 // 当前路由信息
 const route = useRoute();
+
+const router = useRouter();
+
+
+function routeClick(link: RouteLink) {
+  router.push(link.link);
+}
 </script>
 
 <style lang="less">
 .h-nav {
   &__wrap {
-    width: 100%;
+    // width: 100%;
+    width: 290px;
+    transition: width 0.6s;
   }
 
   &__banner {
@@ -50,8 +71,12 @@ const route = useRoute();
     text-align: center;
   }
 
-  &__banner-bold {
+  &__banner--bold {
     font-weight: 700;
+  }
+
+  &__banner--hidden {
+    display: none;
   }
 
   &__icons {
@@ -78,7 +103,7 @@ const route = useRoute();
     }
   }
 
-  &__link-active {
+  &__link--active {
     position: relative;
     background-color: @hover;
     color: @text-dark;
@@ -98,6 +123,42 @@ const route = useRoute();
     /* stylelint-disable-next-line selector-class-pattern */
     & > .h-nav__icons {
       color: @icon-purple;
+    }
+  }
+
+  &__text--hidden {
+    transition: display 0.3s;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .h-nav {
+    &__wrap {
+      width: 60px;
+      transition: width 0.3s;
+    }
+
+    &__banner--show {
+      display: none;
+    }
+
+    &__banner--hidden {
+      display: initial;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    &__icons {
+      margin: 0;
+    }
+
+    &__text--hidden {
+      display: none;
     }
   }
 }

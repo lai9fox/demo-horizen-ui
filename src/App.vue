@@ -9,9 +9,9 @@
 
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
-import NavBar from '@/components/nav-bar.vue';
+import NavBar from '@/components/nav-bar/index.vue';
 import Page from '@/views/page.vue';
-import { computed } from 'vue';
+import { computed, type Ref } from 'vue';
 
 // 页面自定义数据
 const route = useRoute();
@@ -29,7 +29,7 @@ const title = computed(() => {
 }
 
 .nav {
-  width: 290px;
+  // width: 290px;
   height: 100%;
   background-color: @bg-white;
 }

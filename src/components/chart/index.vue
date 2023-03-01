@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject, watch, onMounted, nextTick } from 'vue';
+import { ref, watch, onMounted, nextTick } from 'vue';
 import * as echarts from 'echarts/core';
 import { LineChart } from 'echarts/charts';
 import {
@@ -17,6 +17,7 @@ import { LabelLayout, UniversalTransition } from 'echarts/features';
 // 引入 Canvas 渲染器，注意引入 CanvasRenderer 或者 SVGRenderer 是必须的一步
 import { CanvasRenderer } from 'echarts/renderers';
 import createBem from '@lai9fox/bem';
+import type { ECharts } from 'echarts/core';
 
 echarts.use([
   LineChart,
@@ -39,13 +40,13 @@ const props = defineProps({
   }
 });
 
-const chart = ref(null);
-let eChartInstance = null;
+const chart = ref<HTMLDivElement | null>(null);
+let eChartInstance: ECharts | null = null;
 
 /** 监测图表配置、数据并更新 echart */
 watch(() => props.chartOption, option => {
   nextTick(() => {
-    eChartInstance.setOption(option);
+    eChartInstance && eChartInstance.setOption(option);
   });
 }, {
   immediate: true
@@ -53,8 +54,7 @@ watch(() => props.chartOption, option => {
 
 /** 挂载元素后初始化 echart 实例 */
 onMounted(() => {
-  console.log(chart);
-  eChartInstance = echarts.init(chart.value);
+  chart.value && (eChartInstance = echarts.init(chart.value));
 });
 </script>
 

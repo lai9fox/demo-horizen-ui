@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { inject, computed } from 'vue';
+import { computed } from 'vue';
 import createBem from '@lai9fox/bem';
 const bem = createBem('h-card');
 

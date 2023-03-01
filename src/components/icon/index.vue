@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, inject } from 'vue';
+import { computed } from 'vue';
 import createBem from '@lai9fox/bem';
 const props = defineProps({
   // icon 名称

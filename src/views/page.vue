@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { useRoute, RouterLink } from 'vue-router';
 import { computed } from 'vue';
-import ToolBar from '@/components/toolbar.vue';
+import ToolBar from '@/components/toolbar/index.vue';
 
 const props = defineProps({
   // 主体页面的标题

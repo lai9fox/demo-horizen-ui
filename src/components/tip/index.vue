@@ -1,7 +1,7 @@
 <template>
   <div :class="bem()">
     <div v-if="prefix" :class="bem('prefix')">
-      <BaseIcon :name="prefix" :class="bem('icon')" />
+      <HIcon :name="prefix" :class="bem('icon')" />
     </div>
     <div :class="bem('info')" :style="infoMargrin">
       <div v-if="title" :class="bem('title')">
@@ -15,13 +15,13 @@
       </div>
     </div>
     <div v-if="suffix" :class="bem('suffix')">
-      <BaseIcon :name="suffix" :class="bem('icon')" />
+      <HIcon :name="suffix" :class="bem('icon')" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, inject } from 'vue';
+import { computed } from 'vue';
 import createBem from '@lai9fox/bem';
 const bem = createBem('h-tip');
 

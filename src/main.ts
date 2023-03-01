@@ -5,13 +5,13 @@ import App from './App.vue';
 import router from './router';
 
 import './assets/main.css';
-// 基础组件
-import BaseComponents from '@/components/base';
+// 全局组件
+import GlobalComponents from '@/components';
 
 const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
-app.use(BaseComponents);
+app.use(GlobalComponents);
 
 app.mount('#app');

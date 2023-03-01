@@ -11,9 +11,9 @@
       :placeholder="props.placeholder"
       v-bind="attrs"
       @keypress.enter="enterInput"
-      @input="emits('update:modelValue', $event.target.value)"
+      @input="emits('update:modelValue', ($event.target as HTMLInputElement).value)"
     >
-    <BaseIcon
+    <HIcon
       v-show="clearIconShow"
       name="close"
       :class="bem('close')"
@@ -22,7 +22,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, useAttrs, inject } from 'vue';
+import { computed, useAttrs } from 'vue';
 import createBem from '@lai9fox/bem';
 const bem = createBem('h-input');
 // props 属性
@@ -59,10 +59,9 @@ function clearInput() {
 
 /**
  * 清除按钮的显示与隐藏
- * @return {boolean}
  */
 const clearIconShow = computed(() => {
-  return props.showClear && props.modelValue;
+  return props.showClear && !!props.modelValue;
 });
 </script>
 
@@ -73,7 +72,7 @@ const clearIconShow = computed(() => {
   overflow: hidden;
   // width: 100%;
   height: 40px;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   align-items: center;
   padding: 0 10px;
   background-color: @bg-white;

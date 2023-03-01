@@ -1,22 +1,22 @@
 <template>
-  <BaseCard :class="month.month">
+  <HCard :class="month.month">
     <template #extra>
       <div :class="month['month-header']">
         <div :class="month['month-wrap']">
-          <BaseIcon name="canlader" :class="month['month-canlader']" />
+          <HIcon name="canlader" :class="month['month-canlader']" />
           <span :class="month['month-text']">This month</span>
         </div>
         <div :class="month['month-wrap']">
-          <BaseIcon name="table" :class="month['month-chart']" />
+          <HIcon name="table" :class="month['month-chart']" />
         </div>
       </div>
     </template>
     <div :class="month['month-body']">
       <div :class="month['month-summary']">
       </div>
-      <BaseChart :class="month['month-echart']" :chartOption="chartOption" />
+      <HChart :class="month['month-echart']" :chartOption="chartOption" />
     </div>
-  </BaseCard>
+  </HCard>
 </template>
 
 <script setup lang="ts">
