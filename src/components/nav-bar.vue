@@ -17,10 +17,11 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, inject } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
-const bem = inject('$bem')('h-nav');
+import createBem from '@lai9fox/bem';
+const bem = createBem('h-nav');
 // 侧边栏目链接
 const navLinks = ref([
   { name: 'Dashboard', link: '/dashboard', icon: 'dashboard' },

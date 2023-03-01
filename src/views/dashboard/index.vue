@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Tip from '@/components/tip.vue';
 import Month from './component/month.vue';
 import { ref } from 'vue';

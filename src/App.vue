@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router';
 import NavBar from '@/components/nav-bar.vue';
 import Page from '@/views/page.vue';

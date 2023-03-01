@@ -5,7 +5,12 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['plugin:vue/vue3-essential', 'eslint:recommended'],
+  extends: [
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier/skip-formatting'
+  ],
   rules: {
     // 末尾分号
     semi: ['error', 'always'],

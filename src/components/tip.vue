@@ -20,10 +20,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, inject } from 'vue';
-
-const bem = inject('$bem')('h-tip');
+import createBem from '@lai9fox/bem';
+const bem = createBem('h-tip');
 
 const props = defineProps({
   /** 前缀 icon 图标名称 */

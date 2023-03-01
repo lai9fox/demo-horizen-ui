@@ -34,7 +34,7 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useRoute, RouterLink } from 'vue-router';
 import { computed } from 'vue';
 import ToolBar from '@/components/toolbar.vue';

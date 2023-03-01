@@ -22,9 +22,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import createBem from '@lai9fox/bem';
 import { ref, inject } from 'vue';
-const bem = inject('$bem')('h-toolbar');
+const bem = createBem('h-toolbar');
 
 // 搜索参数
 const search = ref('');

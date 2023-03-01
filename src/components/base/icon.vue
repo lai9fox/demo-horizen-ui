@@ -7,8 +7,9 @@
   </span>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, inject } from 'vue';
+import createBem from '@lai9fox/bem';
 const props = defineProps({
   // icon 名称
   name: {
@@ -18,7 +19,7 @@ const props = defineProps({
   color: String
 });
 
-const bem = inject('$bem')('h-icon');
+const bem = createBem('h-icon');
 
 const iconName = computed(() => `#icon-${ props.name }`);
 </script>

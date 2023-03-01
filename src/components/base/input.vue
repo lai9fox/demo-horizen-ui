@@ -21,9 +21,10 @@
     />
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { computed, useAttrs, inject } from 'vue';
-const bem = inject('$bem')('h-input');
+import createBem from '@lai9fox/bem';
+const bem = createBem('h-input');
 // props 属性
 const props = defineProps({
   // 双向绑定

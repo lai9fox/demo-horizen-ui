@@ -14,10 +14,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { inject, computed } from 'vue';
-
-const bem = inject('$bem')('h-card');
+import createBem from '@lai9fox/bem';
+const bem = createBem('h-card');
 
 const props = defineProps({
   /** 标题文字 */
